@@ -83,8 +83,8 @@ public class PetControllerTests {
     public void testInitUpdateForm() throws Exception {
         mockMvc.perform(get("/owners/{ownerId}/pets/{petId}/edit", TEST_OWNER_ID, TEST_PET_ID))
             .andExpect(status().isOk())
-            //.andExpect(model().attributeExists("pet"))
-            .andExpect(model().attributeExists("pot"))
+            .andExpect(model().attributeExists("pet"))
+            //.andExpect(model().attributeExists("pot"))
             .andExpect(view().name("pets/createOrUpdatePetForm"));
     }
 
